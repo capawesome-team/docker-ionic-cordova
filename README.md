@@ -1,17 +1,38 @@
 # docker-ionic-cordova
 
-Docker image for building [Ionic](https://ionicframework.com/) apps with [Cordova](https://cordova.apache.org/).
+🐳 Docker image for building Ionic apps with Cordova.
 
-## How to use this image
+<div class="capawesome-z29o10a">
+  <a href="https://cloud.capawesome.io/" target="_blank">
+    <img alt="Deliver Live Updates to your Capacitor app with Capawesome Cloud" src="https://cloud.capawesome.io/assets/banners/cloud-deploy-real-time-app-updates.png?t=1" />
+  </a>
+</div>
+
+## Usage
+
+### Pull image
+
+Pull from GitHub Container Registry:  
+
+```
+docker pull ghcr.io/capawesome-team/docker-ionic-cordova:latest
+```
 
 ### Build image
 
-Build from [GitHub](https://github.com/robingenz/docker-ionic-cordova):  
+Build locally:  
+
 ```
-docker build -t robingenz/ionic-cordova github.com/robingenz/docker-ionic-cordova
+docker build -t capawesome-team/ionic-cordova .
 ```
 
-Available build arguments:
+Build from GitHub:  
+
+```
+docker build -t capawesome-team/ionic-cordova https://github.com/capawesome-team/docker-ionic-cordova.git#main
+```
+
+Available build arguments:  
 
 - JAVA_VERSION
 - NODEJS_VERSION
@@ -23,11 +44,12 @@ Available build arguments:
 ### Run image
 
 Run the docker image:  
+
 ```
-docker run -it robingenz/ionic-cordova
+docker run -it capawesome-team/ionic-cordova bash
 ```
 
-## CI Configuration
+## Examples
 
 ### GitLab
 
@@ -52,7 +74,3 @@ build_android:
         paths:
             - platforms/android/app/build/outputs/apk/debug
 ```
-
-## Questions / Issues
-
-If you got any questions or problems using the image, please visit my [GitHub Repository](https://github.com/robingenz/docker-ionic-cordova) and write an issue.
